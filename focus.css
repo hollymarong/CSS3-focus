@@ -1,0 +1,94 @@
+*{
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+.wrap{
+	width:100%;
+	height:auto;
+	padding-top:40px;
+}
+.focusWrap{
+	position:relative;
+	width:960px;
+	height:540px;
+	margin:0 auto;
+	overflow:hidden;
+	border:10px solid #e8e8e8;
+	box-shadow:10px 10px 10px 0 rgba(0,0,0,0.4);
+	border-radius:4px;
+}
+.focusWrap .imglists{
+	width:auto;
+	height:540px;
+}
+.imglists li{
+}
+.imglists img{
+	width:960px;
+	height:540px;
+}
+.imgdigest{
+	position:absolute;
+	width:100px;
+	height:100px;
+	border-radius:100px;
+	bottom:40px;
+}
+input[type="radio"]{
+	position:absolute;
+	bottom:10px;
+	width:15px;
+	height:15px;
+	border:5px solid rgba(0,0,0.6);
+	border-radius:10px;
+	z-index:99;
+	opacity:0;
+	cursor:pointer;
+}
+input[type="radio"]+label{
+	position:absolute;
+	bottom:10px;
+	width:15px;
+	height:15px;
+	border:5px solid rgba(0,0,0.6);
+	border-radius:10px;
+	background-color:rgba(0,0,0,0.5);
+	opacity:1;
+	z-index:88;
+}
+input[type="radio"] ~ .imgdetails{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	transform:translateX(960px);
+	transition:transform 0.15s 0.15s,z-index 0s;
+}
+input[type="radio"]:checked ~ .imgdetails{
+	transform:translateX(0px);
+	z-index:2;
+	opacity:1;
+}
+input[value="one"], input[value="one"]+label{
+	right:200px;
+}
+
+input[value="two"], input[value="two"]+label{
+	right:160px;
+}
+
+input[value="three"], input[value="three"]+label{
+	right:120px;
+}
+
+input[value="four"], input[value="four"]+label{
+	right:80px;
+}
+
+input[value="five"], input[value="five"]+label{
+	right:40px;
+}
+input[type="radio"]:checked + label{
+	background-color:#fff;
+}
